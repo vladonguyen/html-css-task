@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Roboto", "Tahoma", "Helvetica", sans-serif;
+}
+
+
+h1,
+h2 {
+    font-weight: 700;
+    color: #5a2d82;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    padding: 1rem 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#main-title {
+    padding: 1rem 0 2rem;
+}
+
+.two-columns {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 5px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: custom-counter;
+}
+
+ol li {
+    counter-increment: custom-counter;
+    position: relative;
+    padding-left: 1.3rem;
+}
+
+ol li::before {
+    content: counter(custom-counter);
+    font-weight: bold;
+    color: #5d3c81;
+    position: absolute;
+    font-size: 1.4rem;
+    left: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .two-columns {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
